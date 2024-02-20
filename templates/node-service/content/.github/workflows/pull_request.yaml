@@ -97,9 +97,9 @@ jobs:
           subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
 
       - name: login to azure acr
-      run: |
-        az acr login -n ${{ env.AZURE_ACR_NAME }}
-        echo "CONTAINER_REGISTRY=${{ env.AZURE_ACR_NAME }}.azurecr.io" >> "$GITHUB_ENV"
+        run: |
+          az acr login -n ${{ env.AZURE_ACR_NAME }}
+          echo "CONTAINER_REGISTRY=${{ env.AZURE_ACR_NAME }}.azurecr.io" >> "$GITHUB_ENV"
 {% endraw %}
 {%- elif values.cloudProvider === "gcp" -%}
 {% raw %}
