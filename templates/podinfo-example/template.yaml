@@ -56,7 +56,7 @@ spec:
         allowedHosts: ['github.com']
         defaultBranch: main
         description: This is ${{ parameters.componentName }}
-        repoUrl: github.com?owner=humanitec-architecture&repo=${{ parameters.componentName }}
+        repoUrl: github.com?owner=htc-demo-00-azure&repo=${{ parameters.componentName }}
         repoVisibility: public
         protectDefaultBranch: false
         {% if steps.environment.output.cloudProvider == 'azure' %}
