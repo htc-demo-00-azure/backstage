@@ -59,7 +59,7 @@ spec:
         repoUrl: github.com?owner=htc-demo-00-azure&repo=${{ parameters.componentName }}
         repoVisibility: public
         protectDefaultBranch: false
-        oidcCustomization: ${{ '{ "useDefault": false, "includeClaimKeys": ["repository_owner"] }' if steps.environment.output.cloudProvider == 'azure' }}
+        oidcCustomization: ${{ steps.environment.output.githubOIDCCustomization }}
 
     - id: humanitec-create-app
       name: Create Humanitec App
